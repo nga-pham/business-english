@@ -72,7 +72,7 @@ const PracticeComponent: React.FC<Props> = ({ practice, correctAnswers = [] }) =
 
           return (
             <span key={i} className={`inline-flex flex-col items-start mx-1 my-1 ${hasLongOptions ? 'w-full' : ''}`}>
-              {explicitNum !== null && <span className="text-xs font-bold text-slate-400 mb-1">Turn {explicitNum}</span>}
+              {explicitNum !== null && <span className="text-xs font-bold text-slate-400 mb-1">Question {explicitNum}</span>}
               <select
                 disabled={submitted}
                 value={userAnswers[currentIndex] || ""}

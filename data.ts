@@ -26,6 +26,10 @@ export const LESSONS: Lesson[] = [
       "meaning": "See someone in person"
     },
     {
+      "word": "Be welcoming",
+      "meaning": "Be warm, friendly that makes others feel comfortable"
+    },
+    {
       "word": "Set up email adddress",
       "meaning": "Create a new email account (mostly internal email)"
     },
@@ -120,6 +124,27 @@ export const LESSONS: Lesson[] = [
       },
       "answers": ["b", "f", "d", "h", "c", "i", "j", "e", "a", "g"]
     },
+    {
+      "instruction": "Find the mistake in each sentence and correct it.",
+      "content": [
+        "1. You play the music quietly, please! ...",
+        "2. Putting on this dress now, please. ...",
+        "3. Please to do your task. ...",
+        "4. Don't arguing with your customer. ...",
+        "5. Don't to forget to bring your project. ...",
+        "6. You do this project again, please. ...",
+        "7. Doesn't shout out in the meeting room! ...",
+      ],
+      "answers": [
+        "Play the music quietly, please!", 
+        "Put on this dress now, please.", 
+        "Please do your task.", 
+        "Don't argue with your customer.", 
+        "Don't forget to bring your project.", 
+        "Do this project again, please.", 
+        "Don't shout out in the meeting room!", 
+        ]
+    },
   ]
 },
   {
@@ -128,19 +153,14 @@ export const LESSONS: Lesson[] = [
   "learning_objectives": {
     "goals": [
       "Get reacquainted with someone",
-      "Greet a visitor to your country",
-      "Discuss gestures and custom"
+      "Discuss gestures and custom around the world"
     ],
     "skill_booster": "Speaking and Listening",
     "vocabulary": [
-      "Greetings and customs",
-      "Tourist activities",
-      "Describe an interesting experiences"
+      "Gesture and customs",
     ],
     "grammar": [
       "Present perfect: Statements and yes/no questions",
-      "Form usage",
-      "Past participles of irregular verbs",
       "Already, yet, ever, before and never"
     ]
   },
