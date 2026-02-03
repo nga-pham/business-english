@@ -251,18 +251,6 @@ export const LESSONS: Lesson[] = [
         "Have they already gone to the top of Willis Tower?",
         "has already tried Turkish coffee / has already tried it",
       ]
-    },
-    {
-      "instruction": "Read and practice the Conversation Model with a partner",
-      "content": [
-        "A: Audrey, have you met Hannah?",
-        "B: No, I haven't.",
-        "A: Hannah, I'd like you to meet Audrey.",
-        "C: Hi, Audrey. You look familiar. Have we met before?",
-        "B: I don't think so",
-        "C: I know! Last month, you were at my sister Nicole's party.",
-        "B: Oh, that's right! How have you been?"
-      ]
     }
   ]
 }
