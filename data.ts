@@ -22,7 +22,7 @@ export const LESSONS: Lesson[] = [
   },
   "vocabulary_booster": [
     {
-      "word": "Face-to-face",
+      "word": "Meet face-to-face",
       "meaning": "See someone in person"
     },
     {
@@ -32,10 +32,6 @@ export const LESSONS: Lesson[] = [
     {
       "word": "Set up email adddress",
       "meaning": "Create a new email account (mostly internal email)"
-    },
-    {
-      "word": "Put a face to a name",
-      "meaning": "Finally meet or see someone in person whom you previously only knew by name"
     },
     {
       "word": "How are you finding it here?",
