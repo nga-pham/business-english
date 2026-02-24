@@ -13,7 +13,7 @@ export interface VocabularyItem {
 
 export interface Practice {
   instruction: string;
-  content: string[];
+  content?: string[];
   options?: Record<string, string>;
   answers?: string[];
 }

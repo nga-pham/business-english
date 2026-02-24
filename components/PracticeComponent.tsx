@@ -156,11 +156,32 @@ const PracticeComponent: React.FC<Props> = ({ practice, correctAnswers = [] }) =
       )}
 
       <div className="space-y-4 mb-10 text-slate-700 leading-relaxed text-lg">
-        {practice.content.map((line, idx) => (
+        {/* {practice.content.map((line, idx) => (
           <div key={idx} className="flex flex-wrap items-center">
             {renderContentLine(line)}
           </div>
-        ))}
+        ))} */}
+        {practice.content ? (
+          // If content exists, render it with dropdowns/inputs
+              practice.content.map((line, idx) => (
+                <div key={idx} className="flex flex-wrap items-center">
+                  {renderContentLine(line)}
+                </div>
+              ))
+            ) : (
+          /* If there's only instruction, render textarea so user can provide free-text answers */
+              <div className="w-full h-full flex flex-col">
+                <textarea
+                  disabled={submitted}
+                  placeholder="Type your answer here..."
+                  value={userAnswers[0] || ""}
+                  onChange={(e) => handleInputChange(0, e.target.value)}
+                  className={`w-full flex-1 min-h-[300px] p-4 rounded-lg border outline-none transition-all resize-none text-base
+                    ${submitted ? 'bg-slate-50 border-slate-200 text-slate-600' : 'bg-white border-slate-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500'}
+                  `}
+                />
+              </div>
+            )}
       </div>
 
       {submitted && hasAnswers && (
