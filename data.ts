@@ -581,7 +581,44 @@ export const LESSONS: Lesson[] =
         ],
         "grammar": []
       },
-      "vocabulary_booster": [],
+      "vocabulary_booster": [
+            {
+                "word": "Maybe you've got a point here",
+                "meaning": "Có thể bạn đúng"
+            },
+            {
+                "word": "(I think) you're right",
+                "meaning": "(Tôi nghĩ là) bạn đúng"
+            },
+            {
+                "word": "I agree (with you)",
+                "meaning": "Tôi đồng ý (với bạn)"
+            },
+            {
+                "word": "Yes, definitely",
+                "meaning": "Đúng, chắc chắn rồi."
+            },
+            {
+                "word": "I disagree (with you)",
+                "meaning": "Tôi không đồng ý (với bạn)"
+            },
+            {
+                "word": "I'm not so sure.",
+                "meaning": "Tôi không chắc lắm."
+            },
+            {
+                "word": "I'm not convinced (by that idea)",
+                "meaning": "Tôi thấy (ý tưởng này) không thuyết phục lắm"
+            },
+            {
+                "word": "I don't think so",
+                "meaning": "Tôi không nghĩ vậy"
+            },
+            {
+                "word": "Don't get me wrong, but I don't think...",
+                "meaning": "Đừng hiểu nhầm, tôi chỉ không nghĩ rằng..."
+            }
+        ],
       "practices": [
         {
           "instruction": "Put the phrases in the correct groups",
@@ -886,7 +923,40 @@ export const LESSONS: Lesson[] =
           "present continuous tense"
         ]
       },
-      "vocabulary_booster": [],
+      "vocabulary_booster": [
+            {
+                "word": "Have you got a minute?",
+                "meaning": "Bạn có thời gian không?"
+            },
+            {
+                "word": "I need a favour.",
+                "meaning": "Tôi cần bạn giúp."
+            },
+            {
+                "word": "How can I help you? / What can I help you with?",
+                "meaning": "Tôi có thể giúp gì bạn?"
+            },
+            {
+                "word": "I'm really sorry about this, but ...",
+                "meaning": "Tôi rất tiếc về việc này, nhưng..."
+            },
+            {
+                "word": "Would you be able to work this afternoon?",
+                "meaning": "Bạn có thể làm việc chiều nay không?"
+            },
+            {
+                "word": "I'm not really sure if I can.",
+                "meaning": "Tôi không chắc có thể làm được"
+            },
+            {
+                "word": "I'll see what I can do",
+                "meaning": "Tôi sẽ xem có thể giúp gì được"
+            },
+            {
+                "word": "Is there any chance you could work late?",
+                "meaning": "Bạn có thể làm việc muộn được không?"
+            }
+        ],
       "practices": [
         {
           "instruction": "Put the phrases in the correct groups",
@@ -1028,7 +1098,72 @@ export const LESSONS: Lesson[] =
           "Zero conditional with 'if'"
         ]
       },
-      "vocabulary_booster": [],
+      "vocabulary_booster": [
+            {
+                "word": "We need to do sth",
+                "meaning": "Chúng ta cần làm gì đó"
+            },
+            {
+                "word": "It can also be a challenge + for sb + to do sth",
+                "meaning": "Điều đó có thể là thách thức"
+            },
+            {
+                "word": "Be unaware of",
+                "meaning": "Không hay biết / không để ý"
+            },
+            {
+                "word": "Pay attention",
+                "meaning": "Chú ý"
+            },
+            {
+                "word": "Address the diversity",
+                "meaning": "Quan tâm đến sự đa dạng"
+            },
+            {
+                "word": "Workshops",
+                "meaning": "Hội thảo"
+            },
+            {
+                "word": "Team-building",
+                "meaning": "Xây dựng đội nhóm"
+            },
+            {
+                "word": "In the same way / the same",
+                "meaning": "Như nhau"
+            },
+            {
+                "word": "Fun venue",
+                "meaning": "Địa điểm vui chơi"
+            },
+            {
+                "word": "Isolation",
+                "meaning": "Sự cô lập"
+            },
+            {
+                "word": "That's a good idea. / That sounds like a good idea.",
+                "meaning": "Ý kiến hay"
+            },
+            {
+                "word": "I know.",
+                "meaning": "Tôi hiểu"
+            },
+            {
+                "word": "Exactly",
+                "meaning": "Chính xác"
+            },
+            {
+                "word": "Yes, I like that.",
+                "meaning": "Ồ tôi thích điều đó"
+            },
+            {
+                "word": "I completely agree",
+                "meaning": "Tôi hoàn toàn đồng ý"
+            },
+            {
+                "word": "Sure. I'll be happy to.",
+                "meaning": "Chắc chắn rồi. Tôi rất vui lòng (làm điều đó)"
+            }
+        ],
       "practices": [
         {
           "instruction": "Complete the sentences using zero conditional",
