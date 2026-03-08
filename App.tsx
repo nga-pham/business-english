@@ -8,7 +8,8 @@ import VocabularyBoosterSection from './components/VocabularyBoosterSection';
 
 const App: React.FC = () => {
   const [currentLessonIndex, setCurrentLessonIndex] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<number>(0); // 0 = Objectives, 1 = Vocab, 2...n = Practices
+  const [activeTab, setActiveTab] = useState<number>(0); // 0 = Objectives, 1 = Vocab, 2...n = Practices  const [loadingAudio, setLoadingAudio] = useState(false);
+  const [loadingAudio, setLoadingAudio] = useState(false);
 
   const navigateToHome = () => {
     setCurrentLessonIndex(null);
@@ -22,9 +23,11 @@ const App: React.FC = () => {
 
   if (currentLessonIndex !== null) {
     const lesson = LESSONS[currentLessonIndex];
+     const hasAudio = !!lesson.audio;
     const tabs = [
       'Learning Objectives', 
       'Vocabulary Booster',
+      ...(hasAudio ? ['Audio'] : []),
       ...lesson.practices.map((_, i) => `Practice ${i + 1}`)
     ];
 
@@ -62,7 +65,7 @@ const App: React.FC = () => {
             ))}
           </div>
 
-          <div className="animate-fadeIn">
+{/*           <div className="animate-fadeIn">
             {activeTab === 0 && (
               <LearningObjectivesSection objectives={lesson.learning_objectives} />
             )}
@@ -73,6 +76,49 @@ const App: React.FC = () => {
               <PracticeComponent 
                 practice={lesson.practices[activeTab - 2]} 
                 correctAnswers={lesson.practices[activeTab - 2].answers}
+              />
+            )}
+          </div> */}
+          <div className="animate-fadeIn">
+            {tabs[activeTab] === 'Learning Objectives' && (
+              <LearningObjectivesSection objectives={lesson.learning_objectives} />
+            )}
+            {tabs[activeTab] === 'Vocabulary Booster' && (
+              <VocabularyBoosterSection vocabulary={lesson.vocabulary_booster} />
+            )}
+            {hasAudio && tabs[activeTab] === 'Audio' && (
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                  <span className="bg-blue-600 w-2 h-8 rounded-full mr-3"></span>
+                  Lesson Audio
+                </h2>
+                <div className="aspect-video w-full rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-inner">
+                   <iframe 
+                     src={lesson.audio} 
+                     className="w-full h-full" 
+                     allow="autoplay"
+                     title="Lesson Audio"
+                   ></iframe>
+                </div>
+                <div className="mt-8 flex flex-col items-center text-center">
+                  <p className="text-slate-500 mb-6 max-w-md">
+                    Listen to the audio recording for this lesson. You can also open it in a new tab for a better experience.
+                  </p>
+                  <a 
+                    href={lesson.audio?.replace('/preview', '/view')} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 active:scale-95"
+                  >
+                    <span className="mr-2">🔊</span> Open Audio in New Tab
+                  </a>
+                </div>
+              </div>
+            )}
+            {tabs[activeTab].startsWith('Practice') && (
+              <PracticeComponent 
+                practice={lesson.practices[parseInt(tabs[activeTab].split(' ')[1]) - 1]} 
+                correctAnswers={lesson.practices[parseInt(tabs[activeTab].split(' ')[1]) - 1].answers}
               />
             )}
           </div>

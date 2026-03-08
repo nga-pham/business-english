@@ -21,6 +21,7 @@ export interface Practice {
 export interface Lesson {
   lesson_title: string;
   imageSrc?: string;
+  audio?: string;
   learning_objectives: LearningObjectives;
   vocabulary_booster: VocabularyItem[];
   practices: Practice[];
